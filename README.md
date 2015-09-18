@@ -7,7 +7,7 @@
 		expectedSalary:function(){
 			var getSalary;
 			if(getSalary >= 10000 && getSalary <=15000){
-				alert("yep!");
+				console.log("yep!");
 			}
 		}
 #####	}
