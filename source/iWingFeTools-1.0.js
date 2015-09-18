@@ -55,6 +55,15 @@ $(function(){
 				_this.find(".hd ul li").eq(bdang).addClass("onb");
 				}
 			})	
+		_this.find(".hd ul li").click(function(){
+			if(!_this.find(".bd ul").is(":animated")){
+				var jia_dang = $(this).index(); 
+				dang = jia_dang;
+				_this.find(".bd ul").animate({"left":-li_width*dang},delayTime);
+				$(this).siblings(".hd ul li").removeClass("onb");
+				$(this).addClass("onb");
+				}
+			})		
 		timer = window.setInterval(function(){
 			_this.find(".next").click();
 			},interTime)	
@@ -270,7 +279,104 @@ $(function(){
 				$(obj).removeClass(fixed_class);
 				}
 			})
-		}		
+		}
+	function userName_test(obj){
+		var _this = $(obj).val();
+		if(_this!=""){
+			if(_this.length<6 || !/^[a-zA-z]\w{3,15}$/.test(_this)){
+				$(obj).next(".biao_tishi").text("用户名格式错误！");
+				return false;
+				}else{
+					$(obj).next(".biao_tishi").text("正确");
+					return true;
+					}
+			}else{
+				$(obj).next(".biao_tishi").text("请输入用户名！");
+				return false;
+				}
+		}
+	function e_mail_test(obj){
+		var _this = $(obj).val();
+		if(_this!=""){
+			if(!/.+@.+\.[a-zA-Z]{2,4}$/.test(_this)){
+				$(obj).next(".biao_tishi").text("请输入正确格式的邮箱！");
+				return false;
+				}else{
+					$(obj).next(".biao_tishi").text("正确");
+					return true;
+					}
+			}else{
+				$(obj).next(".biao_tishi").text("请输入邮箱！");
+				return false;
+				}
+		}
+	function mobile_number_test(obj){
+		var _this = $(obj).val();
+		if(_this!=""){
+			if(!/^1\d{10}$/.test(_this)){
+				$(obj).next(".biao_tishi").text("请输入正确的手机号码");
+				return false;
+				}else{
+					$(obj).next(".biao_tishi").text("正确");
+					return true;
+					}
+			}else{
+				$(obj).next(".biao_tishi").text("请输入手机号码！");
+				return false;
+				}
+		}
+	function password_test(obj){
+		var _this = $(obj).val();
+		if(_this!=""){
+			if(_this.length<6 || _this.length>20){
+				$(obj).next(".biao_tishi").text("密码格式错误");
+				return false;
+				}else{
+					$(obj).next(".biao_tishi").text("正确");
+					return true;
+					}
+			}else{
+				$(obj).next(".biao_tishi").text("请输入密码");
+				return false;
+				}
+		}
+	function password_twice_test(obj,obj_before){
+		var _this = $(obj).val();
+		var _before_this = $(obj_before).val();
+		if(_before_this!=""){
+			if(_before_this!=_this){
+				$(obj_before).next(".biao_tishi").text("两次输入的密码不同");
+				return false;
+				}else{
+					$(obj_before).next(".biao_tishi").text("正确");
+					return true;
+					}
+			}else{
+				$(obj_before).next(".biao_tishi").text("请再次输入密码");
+				return false;
+				}
+		}
+	function IsPC(){  
+        var userAgentInfo = navigator.userAgent;  
+        var Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod");  
+        var flag = true;  
+        for (var v = 0; v < Agents.length; v++) {  
+            if (userAgentInfo.indexOf(Agents[v]) > 0) { flag = false; break; }  
+            }  
+        return flag;  
+	}
+	function writeCookie(name,value){
+		var Days = 30; //此 cookie 将被保存 30 天
+		var exp = new Date();
+		exp.setTime(exp.getTime() + Days*24*60*60*1000);
+		document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString(); 
+		}
+	function readCookie(name){
+		var arr = document.cookie.match(new RegExp("(^| )"+name+"=([^;]*)(;|$)"));
+		if(arr != null)
+			return unescape(arr[0]);
+		}	
+									
 	/*调用区域*/
 	bannerLoop(".banner",800,5000);/*调用bannerLoop*/
 	fadeBanner(".index_banner",700,3000);/*调用渐入Banner*/
@@ -280,6 +386,29 @@ $(function(){
 	easy_tab("tab");/*调用简单TAB切换*/
 	back_top(".back_top");/*调用回到顶部按钮*/
 	shop_fixed(".box","gg");/*滚动固定*/
+	$(".submit_form").click(function(){/*调用表单验证*/
+		var user_Name = userName_test("#username");
+		var e_Mail = e_mail_test("#e_mail");
+		var mobile_test = mobile_number_test("#mobile_number");
+		var password_t = password_test("#password");
+		var password_twice = password_twice_test("#password","#repeat_password");
+		if(user_Name && e_Mail && mobile_test && password_t && password_twice){
+			alert("恭喜您注册成功！");
+			}
+		})
+	var ispc = IsPC(); /*判断是否为PC电脑*/
+	if(ispc){	
+		$(".isPC_div").text("本机为PC电脑");
+		}else{
+			$(".isPC_div").text("本机不是PC电脑");
+			}
+	$(".cookie_write").click(function(){/*写入cookie*/
+		writeCookie("first_name","我的第一个cookie");
+		})
+	$(".cookie_get").click(function(){/*读取cookie*/
+		var readValue = readCookie("first_name");
+		alert(readValue);
+		})					
 	/*调用区域结束*/	
 	
 })

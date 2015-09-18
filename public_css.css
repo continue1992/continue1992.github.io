@@ -16,6 +16,7 @@ a{ text-decoration:none;}
 .daima{ width:480px; padding:10px; line-height:25px; background-color:#1d1f21; color:#c5c8c6;}
 .red{ color:#C00;}
 .yellow{ color:#F90;}
+.green{ color:#0C0;}
 .line{ border-bottom:3px dotted #999; margin:30px 0;}
 /*以上为公用样式*/
 
@@ -122,3 +123,14 @@ a{ text-decoration:none;}
 .box{ width:955px; height:30px; text-align:center; line-height:30px; background-color:#FFF; border:2px solid #06F; z-index:1001;}
 .box.gg{ position:fixed; top:0;}
 /*滚动固定样式结束*/
+
+/*表单验证样式开始*/
+.biao_div{ height:30px; line-height:30px; margin:10px 0;}
+.biao_tishi{ margin-left:10px; height:30px; line-height:30px; font-size:14px; color:#F00;}
+.form_text{ width:150px; height:20px; text-indent:5px;}
+.submit_form{ width:50px; height:25px; background-color:#CCC; color:#FFF; display:block; line-height:25px; text-align: center;}
+/*表单验证样式结束*/
+
+/*判断是否为电脑样式开始*/
+.isPC_div{ width:100px; height:25px; border:1px solid #000; text-align: center; line-height:25px; color:#F00;}
+/*判断是否为电脑样式结束*/
