@@ -1,300 +1,150 @@
 <!doctype html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>iWingFeTools</title>
-<link rel="stylesheet" href="public_css.css" />
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-<div class="tools_head">
-	<div class="tools_header">
-    	<span class="logo">iWingFeTools</span>
-        <span class="beta">版本：1.0&nbsp;&nbsp;By : Neurotoxin</span>
+<div class="head">
+	<div class="header">
+    	<h1>
+        	<span class="myname">王宏宇</span>
+            <span class="myjob">初级前端工程师</span>
+        </h1>
+        <div class="connect_me">
+        	<span class="myqq">29741912</span>
+            <span class="myemail">neurotoxin@vip.qq.com</span>
         </div>
+        <div class="clear"></div>
     </div>
 </div>
-<div class="basic">
-	<h3 class="basic_h3">循环Banner切换</h3>
-    <!--DEMO开始-->
-	<div class="banner">
-    	<a href="javascript:void(0)" class="lrbutton prev"><</a>
-        <a href="javascript:void(0)" class="lrbutton next">></a>
-    	<div class="hd">
-        	<ul></ul> <!--此处为焦点，由JS自动添加-->
-        </div>
-        <div class="bd">
-        	<ul>
-            	<li>
-                	<a href="#">
-                    	<img src="images/banner01.jpg" />
-                    </a>
-                </li>
-                <li>
-                	<a href="#">
-                    	<img src="images/banner02.jpg" />
-                    </a>
-                </li>
-                <li>
-                	<a href="#">
-                    	<img src="images/banner03.jpg" />
-                    </a>
-                </li>
-                <li>
-                	<a href="#">
-                    	<img src="images/banner04.jpg" />
-                    </a>
-                </li>
-                <li>
-                	<a href="#">
-                    	<img src="images/banner05.jpg" />
-                    </a>
-                </li>
-            </ul>
-        </div>
+<div class="main">
+	<h3 class="common_h3">个人简介</h3>
+    <div class="information">
+    	<div class="my_picture"><img src="images/证件照.jpg" /></div>
+    	<p>年龄：23</p>
+        <p>毕业学校：北京工商大学</p>
+        <p>工作经验：1年</p>
     </div>
-    <!--DEMO结束-->
-    <div class="tishi">调用方法：</div>
-    <div class="daima">
-    	语句：bannerLoop(".banner",800,5000);<br/>
-        <span class="red">结构：banneLoopr("obj",delayTime,interTime);</span><br/>
-        <span class="yellow">参数："obj"为要使用方法的外层div，delayTime为动画执行时间，interTime为自动播放间隔时间</span>
-    </div>
-    <div class="line"></div>
-    
-    <h3 class="basic_h3">渐变Banner切换</h3>
-    <!--DEMO开始-->
-    <div class="index_banner">
-            <div class="hd">
-                <ul>
-                <!--li-->
-                </ul>
-            </div>
-            <div class="bd">
-                <ul>
-                    <li>
-                        <a href="#"><img src="images/index_banner_01.jpg" /></a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="images/index_banner_02.jpg" /></a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="images/index_banner_03.jpg" /></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    <!--DEMO结束-->
-    <div class="tishi">调用方法：</div>
-    <div class="daima">
-    	语句：fadeBanner(".banner",700,3000);<br/>
-        <span class="red">结构：fadeBanner("obj",delayTime,interTime);</span><br/>
-        <span class="yellow">参数："obj"为要使用方法的外层div，delayTime为动画执行时间，interTime为自动播放间隔时间</span>
-    </div>
-    <div class="line"></div>
-    
-    <h3 class="basic_h3">弹出框</h3>
-    <!--DEMO开始-->
-    <div class="black_blank"></div><!--黑色半透明蒙板层-->
-    <div class="height_blank">
-    	<a href="javascript:void(0)" class="alarm_button" style=" width:100px; height:30px; background-color:#C00; color:#FFF; text-align: center; line-height:30px; display:block; border-radius:5px;">点击出现弹出框</a>
-    </div><!--无意义的占位div-->
-    <div class="alarm_window">
-    	<div class="alarm_title">提示!</div>
-        <div class="alarm_content">
-        	请注意！此处为弹窗口的内容！<br/>
-            请注意！此处为弹窗口的内容！<br/>
-            请注意！此处为弹窗口的内容！<br/>
-            请注意！此处为弹窗口的内容！
-            <a href="javascript:void(0)" class="close_button">close</a>
-        </div>
-    </div>
-    <!--DEMO结束-->
-    <div class="tishi">调用方法：</div>
-    <div class="daima">
-    	语句：alarmFun(".alarm_button",".close_button",".alarm_window");<br/>
-        <span class="red">结构：alarmFun(a_obj,close_button,alarm_obj)；</span><br/>
-        <span class="yellow">参数：a_obj为点击出发弹出框的对象，close_button为点击关闭弹出框的对象，alarm_obj为弹出框对象</span>
-    </div>
-    <div class="line"></div>
-    
-    <h3 class="basic_h3">回到顶部按钮</h3>
-    <!--DEMO开始-->
-    <div class="box">此为scroll过此div时将此div固定的盒子</div>
-    <!--DEMO结束-->
-    <div class="tishi">调用方法：</div>
-    <div class="daima">
-    	语句：shop_fixed(".box","gg");<br/>
-        <span class="red">结构shop_fixed(obj,fixed_class);</span><br/>
-        <span class="yellow">参数：obj为要固定的div，fixed_class为添加固定样式的class
-        </span>
-    </div>
-    <div class="line"></div>
-    
-    <h3 class="basic_h3">文字纵向循环滚动</h3>
-    <!--DEMO开始-->
-    <div class="text_scroll_loop">
+	<h3 class="common_h3">职业技能</h3>
+	<div class="myskills">
     	<ul>
-        	<li><a href="#">习近平批准整治军队地产，纠治6类突出问题</a></li>
-            <li><a href="#">中国近期将完成在南沙岛礁上陆域吹填工程建设</a></li>
-            <li><a href="#">网络小说冲击荧屏，以影视创新之名收割粉丝</a></li>
-            <li><a href="#">红色通缉令嫌犯在加开农场，否认出逃事实</a></li>
-        </ul>
-    </div>
-    <!--DEMO结束-->
-    <div class="tishi">调用方法：</div>
-    <div class="daima">
-    	语句：textScrollLoop(".text_scroll_loop",500,3000);<br/>
-        <span class="red">结构：textScrollLoop(obj,delayTime,interTime)；</span><br/>
-        <span class="yellow">参数：obj为滚动窗对象,delayTime为动画执行速度,interTime为动画执行间隔时间</span>
-    </div>
-    <div class="line"></div>
-    
-    <h3 class="basic_h3">幻灯片式切换</h3>
-    <!--DEMO开始-->
-    <div class="photo_banner">
-        <div class="img_area">
-            <div class="btn">
-                <div class="btn_left"></div>
-                <div class="btn_right"></div>
+        	<li>
+            	<div class="img">
+                	<img src="images/icon-html.jpg" />
+                </div>
+                <div class="detail">
+                	<h3>HTML(5)</h3>
+                	<p>知道语义性的含义，熟练手写符合w3c标准的HTML页面。</p>
+                </div>
                 <div class="clear"></div>
-            </div>
-            <img src="images/01.jpg" />
-        </div>
-        <div class="ctrl_area">
-            <ul>
-                <li><img src="images/01.jpg" /></li>
-                <li><img src="images/02.jpg" /></li>
-                <li><img src="images/03.jpg" /></li>
-                <li><img src="images/04.jpg" /></li>
-                <li><img src="images/05.jpg" /></li>
-                <li><img src="images/01.jpg" /></li>
-                <li><img src="images/02.jpg" /></li>
-                <li><img src="images/03.jpg" /></li>
-                <li><img src="images/04.jpg" /></li>
-                <li><img src="images/05.jpg" /></li>
-                <li><img src="images/01.jpg" /></li>
-                <li><img src="images/02.jpg" /></li>
-                <li><img src="images/03.jpg" /></li>
-                <li><img src="images/04.jpg" /></li>
-                <li><img src="images/05.jpg" /></li>
-            </ul>
-        </div>
-    </div>
-    <!--DEMO结束-->
-    <div class="tishi">调用方法：</div>
-    <div class="daima">
-    	语句：slide_banner(".photo_banner",500,3,5,105);<br/>
-        <span class="red">结构：slide_banner(obj,delayTime,tab_num,show_num,li_allwidth)；</span><br/>
-        <span class="yellow">参数：obj为外层包裹对象,delayTime为动画执行速度,tab_num为超过第几个执行滚动的数字，show_num是选项卡可见个数，li_allwidth为单个选项卡的width,padding,margin值的和<br/>
-        备注：在主显示大图上有左右点击两个区域，可自定义
-        </span>
-    </div>
-    <div class="line"></div>
-    
-    <h3 class="basic_h3">简单TAB切换</h3>
-    <!--DEMO开始-->
-    <div id="tab" style="margin-left:280px;">
-      <div class="tabList">
-        <ul>
-            <li class="cur">许嵩</li>
-            <li>周杰伦</li>
-            <li>林俊杰</li>
-            <li>陈奕迅</li>
+            </li>
+        	<li>
+            	<div class="img">
+            		<img src="images/icon-css.jpg" />
+                </div>
+                <div class="detail">
+                	<h3>CSS(3)</h3>
+                	<p>熟练使用CSS对网页进行布局，了解不同浏览器的兼容性。对于CSS3中常用的效果基本会用。</p>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+            	<div class="img">
+            		<img src="images/icon-js.jpg" />
+                </div>
+                <div class="detail">
+                	<h3>Javascript</h3>
+                	<p>会使用原生JS，但需要复杂操作DOM时还是会选择jQuery，正在学习《Javascript高级程序设计》中。</p>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+            	<div class="img">
+            		<img src="images/icon-jquery.jpg" />
+                </div>
+                <div class="detail">
+                	<h3>jQuery</h3>
+                	<p>熟练使用jQuery，可以手工还原大部分交互效果及逻辑。</p>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+            	<div class="img">
+            		<img src="images/icon-less.jpg" />
+                </div>
+                <div class="detail">
+                	<h3>Less</h3>
+                	<p>会使用Less语法，编译器目前使用Koala。</p>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+            	<div class="img">
+            		<img src="images/icon-ps.jpg" />
+                </div>
+                <div class="detail">
+                	<h3>PhotoShop</h3>
+                	<p>熟练使用PhotoShop，日常前端所需掌握的PS技巧基本都会。</p>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <li>
+            	<div class="img">
+            		<img src="images/icon-svn.jpeg" />
+                </div>
+                <div class="detail">
+                	<h3>SVN</h3>
+                	<p>使用过SVN，有多人协作经验。</p>
+                </div>
+                <div class="clear"></div>
+            </li>
+            <div class="clear"></div>
         </ul>
-      </div>
-      <div class="tabCon">
-        <div class="cur">断桥残雪、千百度、幻听、想象之中</div>
-        <div>红尘客栈、牛仔很忙、给我一首歌的时间、听妈妈的话</div>
-        <div>被风吹过的夏天、江南、一千年以后</div>
-        <div>十年、K歌之王、浮夸</div>
-      </div>
     </div>
-    <!--DEMO结束-->
-    <div class="tishi">调用方法：</div>
-    <div class="daima">
-    	语句：easy_tab("tab");<br/>
-        <span class="red">结构：easy_tab(obj);</span><br/>
-        <span class="yellow">参数：obj为外层包裹,注意：obj为id，请不要带#
-        </span>
+    <h3 class="common_h3">工作经验</h3>
+    <div class="workExperience">
+    	<div class="company_logo">
+        	<img src="images/iwing.jpg" />
+        </div>
+        <div class="work_detail">
+        	<p>北京艾唯博瑞科技有限公司</p>
+            <p>前端工程师</p>
+            <p>根据UI设计师提供的设计图，实现Web界面，优化代码并保持在各浏览器下的良好兼容性；保证Web界面在不同移动终端上保持优质的用户体验； Web前端表现层设计和开发；JavaScript程序模块开发； 配合后台开发人员实现产品界面和功能；</p>
+        </div>
+        <div class="clear"></div>
     </div>
-    <div class="line"></div>
-    
-    <h3 class="basic_h3">回到顶部按钮</h3>
-    <!--DEMO开始-->
-    <div class="back_top"></div>
-    <!--DEMO结束-->
-    <div class="tishi">调用方法：</div>
-    <div class="daima">
-    	语句：back_top(".back_top");<br/>
-        <span class="red">结构：back_top(obj)</span><br/>
-        <span class="yellow">参数：obj为回到顶部按钮
-        </span>
+    <h3 class="common_h3">项目经验</h3>
+    <div class="project">
+    	<ul>
+        	<li>
+            	<a href="http://www.nsyh001.com" target="_blank">「农商1号电商平台」</a>
+                <div class="workjob">前端工程师</div>
+                <div class="descripe">农商1号为国内最大的农商企业金正大集团打造的最大农资电商网站。前端部分全部由我完成。</div>
+            </li>
+            <li>
+            	<a href="http://cdsti.iwingchina.com.cn" target="_blank">「大唐研究院」</a>
+                <div class="workjob">前端工程师</div>
+                <div class="descripe">前端部分全部由我完成。</div>
+            </li>
+            <li>
+            	<a href="http://www.boimc.com.cn" target="_blank">「内蒙古银行」</a>
+                <div class="workjob">前端工程师</div>
+                <div class="descripe">前端部分全部由我完成。</div>
+            </li>
+            <li>
+            	<div class="descripe red">等pc，手机站，微信约30个项目</div>
+            </li>
+        </ul>
     </div>
-    <div class="line"></div>
-    
-    <h3 class="basic_h3">表单验证</h3>
-    <!--DEMO开始-->
-    <div class="biao_div">用户名：<input type="text" class="form_text" id="username" /><span class="biao_tishi"></span></div> 
-    <div class="biao_div">邮箱：<input type="text" class="form_text" id="e_mail" /><span class="biao_tishi"></span></div> 
-    <div class="biao_div">手机号：<input type="text" class="form_text" id="mobile_number" /><span class="biao_tishi"></span></div>
-    <div class="biao_div">输入密码：<input type="text" class="form_text" id="password" /><span class="biao_tishi"></span></div>
-    <div class="biao_div">重复密码：<input type="text"class="form_text" id="repeat_password"  /><span class="biao_tishi"></span></div>
-    <a href="javascript:void(0)" class="submit_form">验证</a>
-    <!--DEMO结束-->  
-    <div class="tishi">调用方法：</div>
-    <div class="daima">
-    	语句：<br/>
-        userName_test("#username"); <span class="green">验证用户名</span><br/>
-        e_mail_test("#e_mail"); <span class="green">验证邮箱</span><br/>
-        mobile_number_test("#mobile_number"); <span class="green">验证手机号</span><br/>
-        password_test("#password"); <span class="green">验证密码</span><br/>
-        password_twice_test("#password","#repeat_password"); <span class="green">验证第二次输入密码</span><br/>
-        <span class="red">
-        结构：<br/>
-        userName_test(obj);<br/>
-        e_mail_test(obj);<br/>
-        mobile_number_test(obj);<br/>
-        password_test(obj);<br/>
-        password_twice_test(obj,obj_before);<br/>
-        </span><br/>
-        <span class="yellow">参数：obj为要验证表单的id，before为第一次输入密码的id。
-        </span>
-    </div>
-    <div class="line"></div>
-    
-    <h3 class="basic_h3">判断是否为PC</h3>
-    <!--DEMO开始-->
-    <div class="isPC_div"></div>
-    <!--DEMO结束-->
-    <div class="tishi">调用方法：</div>
-    <div class="daima">
-    	语句：IsPC();<br/>
-        <span class="red">结构：IsPC();</span><br/>
-        <span class="yellow">无参数，直接调用即可,返回值为true为PC，返回值为false不是PC。
-        </span>
-    </div>
-    <div class="line"></div>
-    
-    <h3 class="basic_h3">写入、读取cookie</h3>
-    <!--DEMO开始-->
-	<input type="button" class="cookie_write" value="write cookie" />
-	<input type="button" class="cookie_get" value="get cookie" />
-    <!--DEMO结束-->
-    <div class="tishi">调用方法：</div>
-    <div class="daima">
-    	语句：<br/>
-        writeCookie(name,value);<br/>
-        readCookie(name);<br/>
-        <span class="red">结构：<br/>writeCookie(name,value);<br/>readCookie(name);</span><br/>
-        <span class="yellow">name为要写入的cookie名，value为要写入的cookie值。获取cookie，name为要获取的cookie的名，直接调用即可，执行函数后会返回一个值，为获取cookie到的名为name的cookie的值。
-        </span>
-    </div>
-    <div class="line"></div>
-    
+    <h3 class="common_h3">个人DEMO</h3>
+    <a href="demo.html" class="demo_link">点我</a>
 </div>
 
-<script type="text/javascript" src="source/jquery-1.8.3.min.js"></script>
-<script type="text/javascript" src="source/iWingFeTools-1.0.js"></script>
 </body>
+
+<script type="text/javascript" src="source/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="wscript.js"></script>
 </html>
