@@ -43,7 +43,7 @@ textarea{resize: none;}
 .myskills ul li .img {border-radius: 4px;box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), 0 0 10px rgba(0, 0, 0, 0.1);float: left;margin: 0 1em 0.5em 0;overflow: hidden;position: relative;
 text-align: center;width: 60px; float:left;}
 .myskills ul li .img::before {background: rgba(247, 98, 98, 0.8) none repeat scroll 0 0;box-shadow: 1px 0 1px rgba(0, 0, 0, 0.2);content: "";height: 40px;left: -5px;overflow: hidden;
-position: absolute;top: 0;transform: skewX(-45deg);width: 24px;}
+position: absolute;top: 0;transform: skewX(-45deg);-webkit-transform:skewX(-45deg);width: 24px;}
 .myskills ul li img{ width:100%; display:block; border-radius:4px;box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), 0 0 10px rgba(0, 0, 0, 0.1);}
 .common_h3{font-family:"PingHei","STHeiti SC","SimHei"; font-size:1.5rem; line-height:50px; font-weight:400;}
 .detail{ width:70%; float:left;}
@@ -55,7 +55,7 @@ position: absolute;top: 0;transform: skewX(-45deg);width: 24px;}
 .work_detail p{ padding: 5px 0;}
 .project{ padding:15px 0;}
 .project ul li{ padding: 5px 0; margin-bottom:10px;}
-.project a{ width:200px; font-size:1.2rem; margin-bottom:10px; display:block;  color:#0b83ba;transition: all 0.7s ease 0s; }
+.project a{ width:250px; font-size:1.2rem; margin-bottom:10px; display:block;  color:#0b83ba;transition: all 0.7s ease 0s; }
 .project a:hover{ color:rgba(247, 98, 98, 0.8);}
 .project .workjob{ padding-left:10px; color:#777; line-height:25px;}
 .project .descripe{padding-left:10px; line-height:25px;}
