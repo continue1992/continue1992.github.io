@@ -1,3 +1,10 @@
+body {
+    background: #fff none repeat scroll 0 0;
+    color: #333;
+    font-family: "Lantinghei SC","Helvetica Neue",Helvetica,sans-serif;
+    font-size: 16px;
+    margin: 0;
+}
 .header__address__itembody {
 	margin: 0;
 	background: #fff;
