@@ -1,9 +1,9 @@
 ```js
 var NeurotoxinVX = {
-	name:"HongYu Wang",
-	location:"BeiJing",
-	age:"24",
-	workExperience:"2 year",
-	Email:"neurotoxin@vip.qq.com"
+	Name:"HongYu Wang",
+	Location:"BeiJing",
+	Age:"24",
+	WorkExperience:"2 year",
+	E-mail:"neurotoxin@vip.qq.com"
 }
 ```
